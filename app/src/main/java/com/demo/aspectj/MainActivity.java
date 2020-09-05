@@ -12,6 +12,9 @@ import android.widget.FrameLayout;
 
 import java.util.Random;
 
+/**
+ * https://www.jianshu.com/p/f90e04bcb326
+ */
 public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         long begin = System.currentTimeMillis();
         SystemClock.sleep(new Random().nextInt(5000));
-        Log.d("gxd", (System.currentTimeMillis() - begin) + "...");
+        Log.d("gxd", String.format("验证方法执行时间...%s", System.currentTimeMillis() - begin));
     }
 }
